@@ -1,0 +1,46 @@
+{% load static %}
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel='icon' type='image/x-icon' href='{% static "infomap/favicon.ico" %}' />
+    <title>Bert's Info Map</title>
+</head>
+
+<body>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('worker.js').then(function (registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    // registration failed 
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
+
+    <script src="{% static "infomap/statfetcher.js" %}"></script>
+
+    <p id="testId"></p>
+
+    <button onclick="getOneStat()">Click for stat</button>
+
+    <script>
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
