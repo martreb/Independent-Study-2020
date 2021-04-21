@@ -32,13 +32,13 @@ $("path, circle").hover(function (e) {
     console.log("The boxes can see: " + returnedStateData)
 
     $('#info-box').css('display', 'block');
-    $('#info-box').html(returnedStateData);
+    $('#info-box').html(returnedStateData); 
 
 });
 
 
 $("path, circle").mouseleave(function (e) {
-    $('#info-box').css('display', 'none');
+    $('#info-box').css('display', 'none'); 
 });
 
 $(document).mousemove(function (e) {
@@ -128,7 +128,7 @@ function getAllStats(stateID) {
     let infourl = 'https://api.census.gov/data/2018/acs/acs5?get=NAME,' + wantedDataVariableName + '&for=state:*';
     // ^^^ note that there is no stateID. This is because this function gets the variable data for all states 
 
-    var jsonData = {};
+    var jsonData = {}; 
     $.ajax({
         url: infourl,
         async: false,
